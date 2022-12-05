@@ -17,11 +17,11 @@ sensor_data = open('C:/Users/ldg/Desktop/UFSC/EEL7802/monitoramento/projeto_moni
 now = datetime.datetime.now()
 
 data = json.load(sensor_data)
-temperatura_sensor = data['Temperature']
-umidade_sensor = data['Humidity']
+temperatura_sensor_celcius = data['Temperature_in_Celcius']
+temperatura_sensor_farenheit = data['Temperature_in_Farenheit']
 
-string_dateTime_temperature = (f"{temperatura_sensor} | {now}") 
-string_dateTime_humidity = (f"{umidade_sensor} | {now}") 
+string_dateTime_temperature_Celcius = (f"{temperatura_sensor_celcius} | {now}") 
+string_dateTime_temperature_Farenheit = (f"{temperatura_sensor_farenheit} | {now}") 
 
 # -------------------------------------------------------------------------------------------------------------------------------- 
 
@@ -32,14 +32,14 @@ window.title('Projeto Monitoramento')
 label = Label(window, text='Projeto Monitoramento')
 label.grid(row=0, column=1, padx=10, pady=10) 
 
-temperature = Label(window, text = "Temperatura Ambiente | Date Time:")
-Ttemperature = Label(window, text= string_dateTime_temperature)
+temperature = Label(window, text = "Temperatura Ambiente ºC | Date Time:")
+Ttemperature = Label(window, text= string_dateTime_temperature_Celcius)
 
 temperature.grid(row=1, column=0, padx=10, pady= 10) 
 Ttemperature.grid(row=1, column=1, padx=10, pady= 10)
 
-humidity = Label(window, text = "Úmidade Ambiente | Date Time:")
-Hhumidity = Label(window, text= string_dateTime_humidity)
+humidity = Label(window, text = "Temperatura Ambiente ºF | Date Time:")
+Hhumidity = Label(window, text= string_dateTime_temperature_Farenheit)
 
 humidity.grid(row=2, column=0, padx=10, pady= 10) 
 Hhumidity.grid(row=2, column=1, padx=10, pady= 10)

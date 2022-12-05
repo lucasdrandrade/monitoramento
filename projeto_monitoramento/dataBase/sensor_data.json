@@ -1,4 +1,4 @@
 {
-     "Temperature": 28.00, 
-    "Humidity": 62.7 
+     "Temperature_in_Celcius": 28.00, 
+    "Temperature_in_Farenheit": 62.7 
 }
