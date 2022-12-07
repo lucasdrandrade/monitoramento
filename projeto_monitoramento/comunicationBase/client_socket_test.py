@@ -8,9 +8,9 @@ BUFFER_SIZE = 4096 # send 4096 bytes each time step
 # the ip address or hostname of the server, the receiver
 host = "127.0.0.1"
 # the port, let's use 5001
-port = 5001
+port = 8089
 # the name of file we want to send, make sure it exists
-filename = "C:/Users/ldg/Desktop/UFSC/EEL7802/projeto_monitoramento/dataBase/data.csv"
+filename = "C:/Users/ldg/Desktop/UFSC/EEL7802/monitoramento/projeto_monitoramento/dataBase/sensor_data.json"
 # get the file size
 filesize = os.path.getsize(filename)
 
