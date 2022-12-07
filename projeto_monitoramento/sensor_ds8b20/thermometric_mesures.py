@@ -40,7 +40,7 @@ def read_temp():
         temp_f = temp_c * 9.0 / 5.0 + 32.0
         return temp_c, temp_f
 
-def escrita_json(data, path='/home/pi/projetos/monitoramento/projeto_monitoramento/sensor_ds8b20/themometric_mesures.json'):
+def escrita_json(data, path='/home/pi/projetos/monitoramento/projeto_monitoramento/dataBase/themometric_mesures.json'):
     '''
     Função que faz a escrita do arquivo de temperaturas.
     '''
