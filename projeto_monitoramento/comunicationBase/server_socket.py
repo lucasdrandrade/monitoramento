@@ -9,6 +9,13 @@ host_ip = "192.168.1.66"
 #HOST = socket.gethostname() 
 HOST, PORT= host_ip , 8089
 
+def escrita_json(data, path='C:/Users/ldg/Desktop/UFSC/EEL7802/monitoramento/projeto_monitoramento/dataBase/Themometric_mesures.json'):
+    '''
+    Função que faz a escrita do arquivo de temperatura.
+    '''
+    with open(path, 'w', encoding='utf-8') as outfile:
+        outfile.write(data)
+
 def get_Host_name_IP():
     try:
         host_name = socket.gethostname()
@@ -43,6 +50,8 @@ def server(HOST, PORT):
         print("\nReceived from the Client: {}\n".format(msg_from_client))
         print("\nSent to the Client:     {}\n".format(msg_to_client))
 
+        escrita_json(data=msg_from_client)
     serverSocket.close()
+
 
 server(HOST, PORT) 

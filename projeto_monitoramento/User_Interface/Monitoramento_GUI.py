@@ -11,7 +11,7 @@ from tkinter import messagebox
 # -------------------------------------------------------------------------------------------------------------------------------- 
 
 #load the configs of the json file in the conf variable
-sensor_data = open('C:/Users/ldg/Desktop/UFSC/EEL7802/monitoramento/projeto_monitoramento/dataBase/sensor_data.json')
+sensor_data = open('C:/Users/ldg/Desktop/UFSC/EEL7802/monitoramento/projeto_monitoramento/dataBase/Themometric_mesures.json')
 
 #loading the time variable
 now = datetime.datetime.now()
